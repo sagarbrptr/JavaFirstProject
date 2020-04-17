@@ -27,8 +27,8 @@ db.employee.find().skip(5).limit(5)
 
 db.employee.find({city:"Gurgaon"}).pretty()
 
-db.employee.find({"salary.0":{$lt: 45555}})
+db.employee.find({"salary.0":{$lt: 20000}})
 
-db.employee.find({city: "Gurgaon", "salary.0":{$gt: 45555}})
+db.employee.find({city: "Gurgaon", "salary.0":{$gt: 20000}})
 
 db.employee.find({city:"Gurgaon"}).count()
