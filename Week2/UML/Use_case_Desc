@@ -1,0 +1,4 @@
+Actor : Customer
+Use cases : Order, SpecialOrder, NormalOrder
+Customer initiates the Order use case.
+Special and Normal Order use cases are extended from Order use case. 

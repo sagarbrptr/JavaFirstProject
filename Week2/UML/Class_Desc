@@ -1,0 +1,4 @@
+Customer class is present which has name and location attributes and sendOrder(),receiveOrder() behaviour functions.
+single customer object can have many orders (1..n)
+Order Class has two sub classes Special and Normal order, the behaviour of the subclasses differ from each other.
+SpecialOrder can perform dispatch() operation while NormalOrder can perform receive() operation along with dispatch() operation.

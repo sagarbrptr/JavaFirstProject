@@ -1,0 +1,3 @@
+The first call in sequence is initialization of Customer object. The customer object initiates Order object through sendOrder() message. 
+The Order object then Confirms the order and initiates Normal or Special Order object based on the type of Order. 
+The Special or Normal order object then calls Dispatch() method to dispatch the order, for this a self call to the object is performed. After successful execution of the function call, return messages are passed back to the calling objects. 

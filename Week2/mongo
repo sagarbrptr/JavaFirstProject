@@ -1,0 +1,34 @@
+use mongotest
+
+db.employee.insertMany([
+{fname: "Sagar", salary:[12345,12345,1234,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Pune"},
+{fname: "Bali", salary:[19000,13000,19000,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Pune"},
+{fname: "Arjun", salary:[29000,23000,19000,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Pune"},
+{fname: "Ram", salary:[12000,12000,1234,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Bengaluru"},
+{fname: "Bhrama", salary:[28000,23000,19000,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Bengaluru"},
+{fname: "Vishnu", salary:[98000,23000,19000,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Bengaluru"},
+{fname: "Indra", salary:[78887,12345,1234,45555,25000,45555,12345,12345,1234,45555,45555,45555,] , city: "Gurgaon"},
+{fname: "Lakshman", salary:[12000,12345,1234,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Gurgaon"},
+{fname: "Indrajeet", salary:[12000,13000,19000,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Nagpur"},
+{fname: "Sa", salary:[7888,13000,19000,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Nagpur"},
+{fname: "Hanuman", salary:[12000,13000,19000,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Nagpur"},
+{fname: "Sugreev", salary:[19000,13000,19000,45555,45555,45555,12345,12345,1234,45555,45555,45555,] , city: "Pune"}
+])
+
+db.employee.find().pretty()
+
+db.employee.find({ },{fname:1}).pretty()
+
+db.employee.find({ },{_id:0}).pretty()
+
+db.employee.find().limit(5)
+
+db.employee.find().skip(5).limit(5)
+
+db.employee.find({city:"Gurgaon"}).pretty()
+
+db.employee.find({"salary.0":{$lt: 45555}})
+
+db.employee.find({city: "Gurgaon", "salary.0":{$gt: 45555}})
+
+db.employee.find({city:"Gurgaon"}).count()

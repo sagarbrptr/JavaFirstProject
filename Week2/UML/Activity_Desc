@@ -1,0 +1,9 @@
+Activity Diagram for Order management System:
+
+Four Activities are present : 
+1.Customer sends an order request
+2.Order request system confirms the receipt of the order
+3.Confirm the Order
+4.Dispatch the Order
+
+At the start of the process, Customer sends an order request to which the system confirms the order receipt ( as shown as activity no.2). After that Two conditions are checked whether the order is normal or special and if any one passes then the order is Confirmed and Dispatched further else the activity is terminated without confirming the order. 
