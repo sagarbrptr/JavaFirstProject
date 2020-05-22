@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <main class="container">
+         <h1>Radio button Calculator</h1>
+         <div class="container">
+            <div class="row">
+                <input id="number1" class="col" type="number" placeholder="Enter Number 1">
+                <input id="number2" class="col" type="number" placeholder="Enter Number 2">
+            </div>
+         </div>
+         <div class="container">
+              
+                <input type="radio" id="add" name="operator" value="Add">
+                <label for="add">Add</label><br>
+                <input type="radio" id="multiply" name="operator" value="Multiply">
+                <label for="multiply">Multiply</label><br>
+                <input type="radio" id="divide" name="operator" value="Divide">
+                <label for="divide">Divide</label><br>
+                <input type="radio" id="subtract" name="operator" value="Subtract">
+                <label for="subtract">Sub</label><br>
+            <div class="row">
+              <h3 class="col" style="text-align: right;">Result : </h3>
+              <div class="col" id="result"></div>
+            </div>
+        </div>
+     </main>   
+</body>
+<script src="js/script.js"></script>
+</html>

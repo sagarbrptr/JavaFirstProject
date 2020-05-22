@@ -1,16 +1,25 @@
-#display{
+input[type=number],input[type=text]{
     border-style: solid;
     border-width: 1px;
     border-color: blue;
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     float: left;
 }
-#res{
+#result{
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+    text-align: left;
+    background-color: white;
     float: right;
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 #clearDisplay{
     float: right;
