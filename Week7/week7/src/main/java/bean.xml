@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	<bean id="employee1" class="com.sapient.week7.Employee">
+		<property name="id" value="1"></property>
+		<property name="name" value="Sagar"></property>
+		<property name="city" value="pune"></property>
+	</bean>
+	
+	<bean id="employee2" class="com.sapient.week7.Employee">
+		<property name="id" value="2"></property>
+		<property name="name" value="Sagar2"></property>
+		<property name="city" value="pune2"></property>
+	</bean>
+	
+	<bean id="employee3" class="com.sapient.week7.Employee">
+		<property name="id" value="3"></property>
+		<property name="name" value="Sagar3"></property>
+		<property name="city" value="pune3"></property>
+	</bean>
+	
+	<util:list id="employeelist" value-type="com.sapient.week7.Employee">
+		<ref bean="employee1"></ref>
+		<ref bean="employee2"></ref>
+	</util:list>
+	
+	<util:map id="employeelist" map-class="java.util.HashMap" key-type="java.lang.String" value-type="com.sapient.week7.Employee">
+		<entry key="employee1" value-ref="employee1" />
+		<entry key="employee2" value-ref="employee2" />
+		<entry key="employee3" value-ref="employee3" />
+	</util:map>
+</beans>
